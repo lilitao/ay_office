@@ -9,9 +9,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Ay_CRM</module>
-        <module>CRM_DataAccess</module>
-        <module>CRM_Client</module>
-        <module>CRM_Web</module>
+        <module>ERP_DataAccess</module>
+        <module>ERP_Client</module>
+        <module>ERP_Web</module>
     </modules>
     <packaging>pom</packaging>
 
