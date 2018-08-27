@@ -16,6 +16,10 @@
     </parent>
 
     <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <maven.compiler.source>1.8</maven.compiler.source>
+            <maven.compiler.target>1.8</maven.compiler.target>
+            <java.version>1.8</java.version>
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
         <org.apache.poi.version>3.16</org.apache.poi.version>
         <poi.streaming.version>1.2.0</poi.streaming.version>
@@ -26,6 +30,7 @@
         <servlet.api.version>2.5</servlet.api.version>
         <mockito.version>1.10.19</mockito.version>
         <sonar.maven.plugin.version>3.4.0.905</sonar.maven.plugin.version>
+
     </properties>
 
     <dependencyManagement>

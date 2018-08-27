@@ -15,10 +15,36 @@
     </modules>
     <packaging>pom</packaging>
 
+
+
     <parent>
         <groupId>com.ay</groupId>
         <artifactId>Ay_Parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <properties>
+        <ay.project.version>1.0-SNAPSHOT</ay.project.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ay</groupId>
+                <artifactId>Ay_CRM</artifactId>
+                <version>${ay.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ay</groupId>
+                <artifactId>ERP_Client</artifactId>
+                <version>${ay.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ay</groupId>
+                <artifactId>ERP_DataAccess</artifactId>
+                <version>${ay.project.version}</version>
+            </dependency>
+            
+        </dependencies>
+    </dependencyManagement>
 </project>
