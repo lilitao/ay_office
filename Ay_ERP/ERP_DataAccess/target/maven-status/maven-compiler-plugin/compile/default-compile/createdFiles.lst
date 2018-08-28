@@ -1,0 +1,4 @@
+com\ay\erp\dao\DaoConstant.class
+com\ay\erp\dao\PersistenceListener.class
+com\ay\erp\dao\persistence\ErpCustomer.class
+com\ay\erp\dao\BasePo.class

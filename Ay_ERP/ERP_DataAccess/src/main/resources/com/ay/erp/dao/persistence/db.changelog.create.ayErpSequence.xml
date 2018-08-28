@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="createTable-com.ay.erp.dao.persistence.ayErpSequence" author="AndyLi">
+        <createTable tableName="AyErpSequence">
+            <column name="pkColumnName" type="java.sql.Types.VARCHAR(100)" >
+                <constraints nullable="false"></constraints>
+            </column>
+            <column name="valueColumnName" type="java.sql.Types.BIGINT">
+                <constraints nullable="false"></constraints>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="createPk-com.ay.erp.dao.persistence.AyErpSequence" author="AndyLi">
+        <addPrimaryKey tableName="AyErpSequence" columnNames="pkColumnName" constraintName="pk_AyErpSequence_pkColumnName"></addPrimaryKey>
+    </changeSet>
+</databaseChangeLog>
