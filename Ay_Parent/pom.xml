@@ -30,11 +30,14 @@
         <servlet.api.version>2.5</servlet.api.version>
         <mockito.version>1.10.19</mockito.version>
         <sonar.maven.plugin.version>3.4.0.905</sonar.maven.plugin.version>
+        <liquibase-hibernate5.version>3.6</liquibase-hibernate5.version>
+        <spring.jpa.version>2.0.6.RELEASE</spring.jpa.version>
 
         <surefireArgLine></surefireArgLine>
         <maven.test.skip>false</maven.test.skip>
         <skipTests>false</skipTests>
         <skipITs>false</skipITs>
+
     </properties>
 
     <dependencyManagement>
@@ -238,6 +241,7 @@
                 <plugin>
                     <groupId>org.liquibase</groupId>
                     <artifactId>liquibase-maven-plugin</artifactId>
+                    <version>3.5.3</version>
                 </plugin>
             </plugins>
 

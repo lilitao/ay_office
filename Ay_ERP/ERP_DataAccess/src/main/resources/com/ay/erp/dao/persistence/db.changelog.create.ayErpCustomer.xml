@@ -1,0 +1,43 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="AndyLi" id="createTable-com.ay.erp.dao.persistence.ErpCustomerPo">
+        <createTable tableName="ayErpCustomer">
+            <column name="id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="birthday" type="datetime"/>
+            <column name="busniessPhone" type="varchar(20)"/>
+            <column name="homeAddress" type="varchar(150)"/>
+
+            <column name="officeAddress" type="varchar(150)"/>
+            <column name="personalPhone" type="varchar(20)"/>
+            <column name="sex" type="char(1)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="recordChangedBy" type="varchar(50)"/>
+            <column name="recordChangedTime" type="datetime"/>
+            <column name="recordCreatedBy" type="varchar(50)"/>
+            <column name="recordCreatedTime" type="datetime"/>
+            <column name="recordStatus" type="char(1)"/>
+            <column name="transactionTime" type="datetime"/>
+            <column name="versionNo" type="bigint"/>
+
+        </createTable>
+    </changeSet>
+    <changeSet author="AndyLi" id="addPrimaryKey-com.ay.erp.dao.persistence.ErpCustomer-id">
+        <addPrimaryKey columnNames="id" constraintName="ayErpCustomerPK" tableName="ayErpCustomer"/>
+    </changeSet>
+    <changeSet author="AndyLi" id="createIndex-com.ay.erp.dao.persistence.ErpCustomer-id-name-birthday">
+        <createIndex indexName="index_ayErpCustomer_id_name_birthday" tableName="ayErpCustomer">
+            <column name="id"/>
+            <column name="name"/>
+            <column name="birthday"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

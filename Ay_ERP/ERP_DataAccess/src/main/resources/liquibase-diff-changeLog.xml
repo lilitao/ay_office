@@ -1,0 +1,128 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="ASNPHOI (generated)" id="1535512545561-1">
+        <createTable tableName="ayErpCustomer">
+            <column name="id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="recordChangedBy" type="varchar(1)"/>
+            <column name="recordChangedTime" type="datetime"/>
+            <column name="recordCreatedBy" type="varchar(1)"/>
+            <column name="recordCreatedTime" type="datetime"/>
+            <column name="recordStatus" type="char(1)"/>
+            <column name="transactionTime" type="datetime"/>
+            <column name="versionNo" type="bigint"/>
+            <column name="birthday" type="datetime"/>
+            <column name="busniessPhone" type="varchar(1)"/>
+            <column name="homeAddress" type="varchar(1)"/>
+            <column name="name" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="officeAddress" type="varchar(1)"/>
+            <column name="personalPhone" type="varchar(1)"/>
+            <column name="sex" type="char(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535512545561-2">
+        <addPrimaryKey columnNames="id" constraintName="ayErpCustomerPK" tableName="ayErpCustomer"/>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535512545561-3">
+        <createIndex indexName="index_ayErpCustomer_id_name_birthday" tableName="ayErpCustomer">
+            <column name="id"/>
+            <column name="name"/>
+            <column name="birthday"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535512545561-4">
+        <dropNotNullConstraint columnDataType="number(19,0)" columnName="valueColumnName" tableName="ayErpSequence"/>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535512900453-1">
+        <createTable tableName="ayErpCustomer">
+            <column name="id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="recordChangedBy" type="varchar(1)"/>
+            <column name="recordChangedTime" type="datetime"/>
+            <column name="recordCreatedBy" type="varchar(1)"/>
+            <column name="recordCreatedTime" type="datetime"/>
+            <column name="recordStatus" type="char(1)"/>
+            <column name="transactionTime" type="datetime"/>
+            <column name="versionNo" type="bigint"/>
+            <column name="birthday" type="datetime"/>
+            <column name="busniessPhone" type="varchar(1)"/>
+            <column name="homeAddress" type="varchar(1)"/>
+            <column name="name" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="officeAddress" type="varchar(1)"/>
+            <column name="personalPhone" type="varchar(1)"/>
+            <column name="sex" type="char(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535512900453-2">
+        <addPrimaryKey columnNames="id" constraintName="ayErpCustomerPK" tableName="ayErpCustomer"/>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535512900453-3">
+        <createIndex indexName="index_ayErpCustomer_id_name_birthday" tableName="ayErpCustomer">
+            <column name="id"/>
+            <column name="name"/>
+            <column name="birthday"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535512900453-4">
+        <dropNotNullConstraint columnDataType="number(19,0)" columnName="valueColumnName" tableName="ayErpSequence"/>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535513269142-1">
+        <createTable tableName="ayErpCustomer">
+            <column name="id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="recordChangedBy" type="varchar(1)"/>
+            <column name="recordChangedTime" type="datetime"/>
+            <column name="recordCreatedBy" type="varchar(1)"/>
+            <column name="recordCreatedTime" type="datetime"/>
+            <column name="recordStatus" type="char(1)"/>
+            <column name="transactionTime" type="datetime"/>
+            <column name="versionNo" type="bigint"/>
+            <column name="birthday" type="datetime"/>
+            <column name="busniessPhone" type="varchar(1)"/>
+            <column name="homeAddress" type="varchar(1)"/>
+            <column name="name" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="officeAddress" type="varchar(1)"/>
+            <column name="personalPhone" type="varchar(1)"/>
+            <column name="sex" type="char(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535513269142-2">
+        <addPrimaryKey columnNames="id" constraintName="ayErpCustomerPK" tableName="ayErpCustomer"/>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535513269142-3">
+        <createIndex indexName="index_ayErpCustomer_id_name_birthday" tableName="ayErpCustomer">
+            <column name="id"/>
+            <column name="name"/>
+            <column name="birthday"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535513269142-4">
+        <dropNotNullConstraint columnDataType="number(19,0)" columnName="valueColumnName" tableName="ayErpSequence"/>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535514415082-1">
+        <dropNotNullConstraint columnDataType="number(19,0)" columnName="valueColumnName" tableName="ayErpSequence"/>
+    </changeSet>
+    <changeSet author="ASNPHOI (generated)" id="1535514415082-2">
+        <dropIndex indexName="index_ayErpCustomer_id_name_birthday" tableName="ayErpCustomer"/>
+        <createIndex indexName="index_ayErpCustomer_id_name_birthday" tableName="ayErpCustomer">
+            <column name="id"/>
+            <column name="name"/>
+            <column name="birthday"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

@@ -10,16 +10,19 @@ import java.util.Date;
 
 import static com.ay.erp.dao.DaoConstant.*;
 
-@Entity
+@Entity()
 @Table(name = "ayErpCustomer"
 ,indexes = {
         @Index(name = "pk_ayErpCustomer_id",columnList = "id asc",unique = true),
         @Index(name = "index_ayErpCustomer_id_name_birthday",columnList = "id desc,name desc,birthday desc",unique = false)
 }
+,uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"id"},name ="constraint_ayErpCustomer_id")
+}
 )
 @Setter
 @Getter
-public class ErpCustomer extends BasePo {
+public class ErpCustomerPo extends BasePo {
 
     @TableGenerator(name = "ayErpCustomerGenerator", table = TABLE_NAME, pkColumnName = PK_COLUMN_NAME, valueColumnName = VALUE_COLUMN_NAME, initialValue = 0, allocationSize = 100)
     @GeneratedValue(generator = "ayErpCustomerGenerator",strategy = GenerationType.TABLE)

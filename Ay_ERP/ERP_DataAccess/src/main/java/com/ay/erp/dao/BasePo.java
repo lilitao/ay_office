@@ -36,9 +36,9 @@ public class BasePo {
     @Column(name = "recordCreatedTime",columnDefinition = TIMESTAMP)
     private Date recordCreatedTime;
 
-    @Column(name = "recordChangedBy", columnDefinition = VARCHAR, length = 50)
+    @Column(name = "recordCreatedBy", columnDefinition = VARCHAR, length = 50)
     private  String recordCreatedBy;
 
-    @Column(name = "recordCreatedTime",columnDefinition = TIMESTAMP)
+    @Column(name = "transactionTime",columnDefinition = TIMESTAMP)
     private Date transactionTime;
 }

@@ -1,0 +1,20 @@
+logging:
+  level:
+    org.springframework: DEBUG
+    com.ay: DEBUG
+    liquibase: DEBUG
+    org.h2: DEBUG
+
+spring:
+  liquibase:
+    change-log: classpath:db.changeog.erp.test.master.xml
+    contexts: UT
+    enabled: true
+    drop-first: false
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      naming:
+#      This is needed, otherwise hibernate will change the table name in SQL. Such as: change TblAddress to tbl_address
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
