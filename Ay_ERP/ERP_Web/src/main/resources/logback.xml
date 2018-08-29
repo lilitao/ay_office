@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <include resource="org\springframework\boot\logging\logback\base.xml"></include>
+    <appender name="FULL_ALL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>pmm-dev.log</File>
+        <RollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${coast}-pmm-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </RollingPolicy>
+        <encoder>
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss.SSS}]-[%r]-[%t]-[%p]-[%logger] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender"
+              target="System.out">
+        <encoder charset="UTF-8">
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss.SSS}]-[%r]-[%t]-[%p]-[%logger]	%m%n</pattern>
+        </encoder>
+        <target>System.out</target>
+    </appender>
+
+    <appender name="ASYNC_CONSOLE" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>10000</queueSize>
+        <appender-ref ref="CONSOLE" />
+    </appender>
+
+    <appender name="ASYNC_FULL_ALL" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>10000</queueSize>
+        <appender-ref ref="FULL_ALL" />
+    </appender>
+
+
+    <root level="INFO">
+        <appender-ref ref="ASYNC_CONSOLE" />
+        <appender-ref ref="ASYNC_FULL_ALL" />
+    </root>
+    <logger name="com.aiatss.coast" level="INFO">
+        <appender-ref ref="ASYNC_FULL_ALL" />
+    </logger>
+
+
+
+</configuration>
