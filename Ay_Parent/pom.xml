@@ -23,7 +23,7 @@
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
         <org.apache.poi.version>3.16</org.apache.poi.version>
         <poi.streaming.version>1.2.0</poi.streaming.version>
-        <jdbc.sqlserver.version>5.0</jdbc.sqlserver.version>
+        <jdbc.sqlserver.version>4.0</jdbc.sqlserver.version>
         <jdbc.mysql.version>6.0.6</jdbc.mysql.version>
         <commons.lang3.version>3.2.1</commons.lang3.version>
         <commons.collections.version>3.2.1</commons.collections.version>

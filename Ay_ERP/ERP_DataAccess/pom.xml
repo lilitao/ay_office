@@ -77,7 +77,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>process-resources</phase>
+                        <phase>pre-site</phase>
                         <goals>
                             <goal>${liquibase.action}</goal>
                         </goals>
