@@ -278,10 +278,10 @@
                             <report>index</report>
                             <!--<report>dependency-convergence</report>
                             <report>dependency-info</report>
-                            <report>dependencies</report>-->
+                            <report>dependencies</report>
                             <report>modules</report>
                             <report>plugin-management</report>
-                            <report>plugins</report>
+                            <report>plugins</report>-->
                         </reports>
                     </reportSet>
                 </reportSets>
