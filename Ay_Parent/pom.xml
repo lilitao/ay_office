@@ -218,7 +218,7 @@
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
-                        <phase>compile</phase>
+                        <phase>initialize</phase>
                         <configuration>
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
