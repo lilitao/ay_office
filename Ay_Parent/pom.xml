@@ -33,7 +33,6 @@
         <liquibase-hibernate5.version>3.6</liquibase-hibernate5.version>
         <spring.jpa.version>2.0.6.RELEASE</spring.jpa.version>
 
-        <surefireArgLine></surefireArgLine>
         <maven.test.skip>false</maven.test.skip>
         <skipTests>false</skipTests>
         <skipITs>false</skipITs>
@@ -167,7 +166,7 @@
                 <version>2.18.1</version>
                 <configuration>
                     <failIfNoTests>false</failIfNoTests>
-                    <argLine>${surefireArgLine}</argLine>
+                    <argLine>@{surefireArgLine}</argLine>
                     <includes>
                         <include>**/*Test.java</include>
                         <include>**/Test*.java</include>
@@ -183,6 +182,7 @@
                 <executions>
                     <execution>
                         <id>unit-tests</id>
+                        <phase>test</phase>
                         <goals>
                             <goal>test</goal>
                         </goals>
@@ -206,8 +206,8 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.1</version>
                 <configuration>
-                    <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-                    <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+                    <!--<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
+                    <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>-->
                     <skip>${skipTests}</skip>
                     <output>file</output>
                     <append>true</append>
@@ -215,10 +215,10 @@
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
+                        <phase>initialize</phase>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
-                        <phase>initialize</phase>
                         <configuration>
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>

@@ -5,7 +5,7 @@ package "Individual" {
 class Individual << R , orchid>>
 class Phone << V , green >>
 class Email << V,green>>
-class Address <<V,green>>
+class AddressVO <<V,green>>
 
 Individual : -name
 Individual : -birthday
@@ -17,8 +17,8 @@ Phone : -type
 Email : -emailAddress
 Email : -type
 
-Address : -address
-Address : -type
+AddressVO : -address
+AddressVO : -type
 }
 
 package "Member" {
@@ -47,7 +47,7 @@ Member "*" --* Organization
 
 Individual "1" *-- "*" Phone
 Individual "1" *-- "*" Email
-Individual "1" *-- "*" Address
+Individual "1" *-- "*" AddressVO
 
 Individual "1" *-- "*" Member
 
